@@ -76,11 +76,11 @@ WSGI_APPLICATION = 'studier_django.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'chinese',  # Имя базы данных
-        'USER': 'postgres',  # Имя пользователя
-        'PASSWORD': 'Alala123#',  # Ваш пароль
-        'HOST': 'localhost',  # Можно оставить localhost
-        'PORT': '5433',  # Стандартный порт для PostgreSQL
+        'NAME': os.environ.get('DB_NAME'),
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': os.environ.get('DB_HOST'),
+        'PORT': os.environ.get('DB_PORT', '5432'),
     }
 }
 
