@@ -8,9 +8,10 @@ https://docs.djangoproject.com/en/5.2/howto/deployment/wsgi/
 """
 
 import os
+import sys
 
-from django.core.wsgi import get_wsgi_application
+sys.path.insert(0, 'C:/Env/localassets')
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'studier_django.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'localassets.settings')
 
 application = get_wsgi_application()
